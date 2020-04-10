@@ -7,11 +7,25 @@
       </video>-->
     </div>
     <div class="fillScrenn" :style="{height:fillHeight+'px'}">
-      <h2>页面 跳转{{releasTime}}</h2>
-      <p>
-        <img src="@a/img/loading.svg" width="250" alt="加载中..." />
-      </p>
-      <el-button type="primary">阿牛</el-button>
+      <div class="content">
+        <div class="home-header">
+          <router-link class="link" to="/home">
+            <img class="home-logo" src="@a/img/logo.jpg" alt="biaochenxuying logo" />
+          </router-link>
+        </div>
+        <div class="home-body">
+          <div class="list">
+            <router-link class="link" to="/home">文章</router-link>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              href="https://github.com/gyg0522"
+            >github</a>
+          </div>
+          <div class="introduce">时光正好，未来可期，加油 ！</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -1328,6 +1342,48 @@ export default class WaitingIndex extends Vue {
     top: 0;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.1);
+    .content {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      font-size: 20px;
+      text-align: center;
+      padding-top: 12%;
+      .home-logo {
+        width: 220px;
+        border-radius: 50%;
+        animation: mylogo 3s;
+        -moz-animation: mylogo 3s; /* Firefox */
+        -webkit-animation: mylogo 3s; /* Safari and Chrome */
+        -o-animation: mylogo 3s; /* Opera */
+        animation-iteration-count: infinite;
+      }
+      .home-header {
+        .link {
+          display: block;
+        }
+      }
+      .home-body {
+        padding-top: 20px;
+        .list {
+          .link {
+            display: inline-block;
+            padding: 20px;
+            color: #409eff;
+            min-width: 80px;
+          }
+          .link:hover {
+            color: rgb(155, 35, 35);
+          }
+        }
+      }
+      .introduce {
+        padding-top: 20px;
+        color: #fff;
+      }
+    }
   }
   width: 100%;
   height: 100%;
@@ -1341,6 +1397,64 @@ export default class WaitingIndex extends Vue {
     .videoBox {
       width: 100%;
     }
+  }
+}
+@keyframes mylogo {
+  0% {
+    transform: rotate(0deg) scale(0.8, 0.8);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(0deg) scale(1, 1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.8, 0.8);
+    opacity: 1;
+  }
+}
+@-moz-keyframes mylogo {
+  0% {
+    transform: rotate(0deg) scale(0.8, 0.8);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(0deg) scale(1, 1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.8, 0.8);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes mylogo {
+  0% {
+    transform: rotate(0deg) scale(0.8, 0.8);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(0deg) scale(1, 1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.8, 0.8);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes mylogo {
+  0% {
+    transform: rotate(0deg) scale(0.8, 0.8);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(0deg) scale(1, 1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.8, 0.8);
+    opacity: 1;
   }
 }
 </style>

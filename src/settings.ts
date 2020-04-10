@@ -11,7 +11,7 @@
 
 // You can customize below settings :)
 const settings = {
-  title: '飞鸟枫林',
+  title: '赤血长殷',
   showSettings: true,
   showTagsView: true,
   fixedHeader: false,

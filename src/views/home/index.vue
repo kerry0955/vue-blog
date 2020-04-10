@@ -257,19 +257,21 @@ export default class HomeIndex extends Vue {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  border: 1px solid;
+  // border: 1px solid;
   .item {
-    border: 1px solid red;
+    // border: 1px solid red;
     height: 100%;
   }
   .left {
     width: 15%;
+    background-color: rgba(242, 242, 242, 0.751);
+    border-radius: 10px;
     .typeItem {
       width: 100%;
       padding: 0.3em;
       height: 4em;
       line-height: 4em;
-      border: 1px solid;
+      // border: 1px solid;
       span {
         display: inline-block;
       }
@@ -283,8 +285,11 @@ export default class HomeIndex extends Vue {
     }
   }
   .center {
-    width: 65%;
+    width: 60%;
     padding: 0 1em;
+    background-color: rgba(242, 242, 242, 0.751);
+    border-radius: 10px;
+    margin: auto 2em;
     .listWrap {
       height: 86%;
       overflow-y: auto;
@@ -321,7 +326,7 @@ export default class HomeIndex extends Vue {
           width: 100%;
           height: 100%;
           border-radius: 4px;
-          border: 1px solid #f0f0f0;
+          // border: 1px solid #f0f0f0;
         }
       }
       li {
@@ -330,7 +335,7 @@ export default class HomeIndex extends Vue {
         // width: 100%;
         padding: 15px 0px;
         padding-right: 150px;
-        border-bottom: 1px solid #f0f0f0;
+        // border-bottom: 1px solid #f0f0f0;
         word-wrap: break-word;
         cursor: pointer;
         &:hover {
@@ -371,11 +376,13 @@ export default class HomeIndex extends Vue {
   }
   .right {
     width: 20%;
+    background-color: rgba(242, 242, 242, 0.751);
+    border-radius: 10px;
     & > div {
       width: 94%;
       height: 25%;
       margin: 0 auto;
-      border: 1px solid;
+      border-bottom: 1px solid #fff;
     }
     .tianqi {
       overflow: hidden;
