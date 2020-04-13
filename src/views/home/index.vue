@@ -53,7 +53,57 @@
         />
       </div>
       <div class="item right">
-        <div></div>
+        <div class="myMsg">
+          <div class="personMsg">
+            <div class="card">
+              <h3>我的名片</h3>
+              <p>网名：开着你的花</p>
+              <p>职业：Web前端攻城狮、网页设计</p>
+              <p>现居：贵州省-贵阳市</p>
+              <p>Email：gyg0522@qq.com</p>
+              <ul class="linkmore">
+                <li>
+                  <a
+                    href="http://www.jsguan.xyz"
+                    target="_blank"
+                    class="iconfont icon-zhuye"
+                    title="网站地址"
+                  >
+                    <!-- <img src="@a/img/c01.png" alt /> -->
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=gyg0522@qq.com"
+                    target="_blank"
+                    class="iconfont icon-youxiang"
+                    title="我的邮箱"
+                  >
+                    <!-- <img src="@a/img/c02.png" alt /> -->
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://wpa.qq.com/msgrd?v=3&amp;uin=553392278&amp;site=qq&amp;menu=yes"
+                    target="_blank"
+                    class="iconfont icon-QQ"
+                    title="QQ联系我"
+                  >
+                    <!-- <img src="@a/img/c03.png" alt /> -->
+                  </a>
+                </li>
+                <li id="weixin">
+                  <a href="#" target="_blank" class="iconfont icon-weixin" title="关注我的微信">
+                    <!-- <img src="@a/img/c04.png" alt /> -->
+                  </a>
+                  <i>
+                    <img src="@a/img/logo.png" alt />
+                  </i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div></div>
         <div></div>
         <div class="tianqi">
@@ -384,8 +434,82 @@ export default class HomeIndex extends Vue {
       margin: 0 auto;
       border-bottom: 1px solid #fff;
     }
-    .tianqi {
-      overflow: hidden;
+    .myMsg {
+      // width: 100%;
+      // height: 100%;
+      border: 1px solid transparent;
+      background: url("../../assets/img/a1.jpg") 0 0 / 100% 100% no-repeat;
+      .personMsg {
+        background-color: rgba(0, 0, 0, 0.521);
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 1px solid #f2f2f2;
+      }
+      .card {
+        color: #fff;
+        padding-left: 8px;
+        p {
+          margin: 3px 0;
+          font-size: 13px;
+        }
+        .linkmore {
+          margin: 5px;
+          padding: 0;
+          li {
+            width: 25%;
+            height: auto;
+            float: left;
+            a {
+              height: 33px;
+              width: 33px;
+              display: block;
+              overflow: hidden;
+              box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1),
+                inset 0px 1px 1px rgba(0, 0, 0, 0.7);
+              border-radius: 50%;
+              margin: 0 5px;
+            }
+          }
+          a.iconfont.icon-zhuye {
+            color: #ff991a;
+            background: url("../../assets/img/c01.png") 0 0/100% 93% no-repeat;
+          }
+          a.iconfont.icon-youxiang {
+            color: #ff991a;
+            background: url("../../assets/img/c02.png") 0 0/100% 93% no-repeat;
+          }
+          a.iconfont.icon-QQ {
+            color: #ff991a;
+            background: url("../../assets/img/c03.png") 0 0/100% 93% no-repeat;
+          }
+          a.iconfont.icon-weixin {
+            color: #ff991a;
+            background: url("../../assets/img/c04.png") 0 0/100% 93% no-repeat;
+          }
+          a:hover {
+            opacity: 0.5;
+          }
+          #weixin:hover {
+            img {
+              display: block;
+            }
+          }
+          #weixin i {
+            display: block;
+            height: 31px;
+            width: 50px;
+            img {
+              display: none;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .tianqi {
+        overflow: hidden;
+      }
     }
   }
 }
